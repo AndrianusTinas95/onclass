@@ -1,9 +1,10 @@
 const express = require('express');
+const {loadAllMedia} = require('../controllers/MediaController')
+
 const router = express.Router();
 
-router.get('/media',(req,res)=>{
-    res.send('media get all')
-})
+router.get('/media',loadAllMedia)
+
 router.post('/media',(req,res)=>{
     res.send('media create')
     
